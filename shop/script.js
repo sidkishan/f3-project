@@ -48,6 +48,7 @@ function addFunctionToButton() {
 }
 
 function addToCartFunctionality(event) {
+  alert("Product is added to cart!!");
   let btn = event.target;
   let div = btn.parentNode; //.getAttribute("src");
   let imgLink = div.firstChild.nextElementSibling.getAttribute("src");
