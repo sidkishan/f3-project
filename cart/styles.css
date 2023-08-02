@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  width: 300px;
+  height: 250px;
+}
+section {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 5px;
+}
+.layout {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 2%;
+}
+.bill-layout {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  row-gap: 20px;
+  vertical-align: auto;
+}
+h2 {
+  text-align: center;
+}
+.item {
+  border: 1px solid black;
+  width: 300px;
+  height: auto;
+}
+.item button {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+.item .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin: 0 5px;
+}
+.item .colors {
+  display: flex;
+  margin: 1rem 0;
+}
+.item .colors .row {
+  display: flex;
+  justify-content: space-between;
+}
+.checkout-data {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  justify-items: flex-end;
+}
+span {
+  font-weight: bolder;
+}
+.bill-layout div {
+  color: white !important;
+}
+.total-card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  padding: 10px 10px;
+}
+.bill-layout-container {
+  background-color: black;
+  color: white;
+  height: 50%;
+  padding: 10px 10px;
+}
+.bill-layout-container button {
+  width: 100%;
+  border-radius: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: black;
+  background-color: blacEFEFEFk;
+  cursor: pointer;
+}

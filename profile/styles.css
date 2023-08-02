@@ -1,0 +1,42 @@
+/* Write your styles here */
+* {
+  padding: 0;
+  margin: 0;
+}
+header {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+header a {
+  color: lightgray;
+  text-decoration: none;
+}
+#edit-profile {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
+  padding: 30px 15px;
+  width: 90vw;
+  margin: auto;
+}
+#edit-profile > p {
+  font-size: 20px;
+}
+.edit-btn {
+  width: fit-content;
+  padding: 10px 40px;
+  color: white;
+  background-color: black;
+}
+input {
+  padding: 10px;
+}
+h1 {
+  margin: auto;
+  font-size: 40px;
+}
