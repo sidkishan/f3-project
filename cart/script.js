@@ -48,13 +48,16 @@ function appendProductsInCartUI() {
   cartItemsContainer = document.getElementById("cart-products");
   billContainer = document.getElementById("cart-bill");
   cartItemsContainer.innerHTML = "";
+  billContainer.innerHTML = "";
   cartProductsImgLink = JSON.parse(localStorage.getItem("cartItems"));
   let x = 1;
   let totalPrice = 0;
   cartProductsImgLink.forEach((item) => {
     let elem = null;
+    if (!data) window.location.reload;
     if (
       (elem = data.find((ele) => {
+        // find me error hai
         return ele.image === item;
       }))
     ) {
@@ -94,8 +97,39 @@ function appendProductsInCartUI() {
     "₹" + totalPrice
   }</span></div>`;
   billContainer.innerHTML += totalDiv;
+  removeProductFromCart();
 }
 setTimeout(appendProductsInCartUI, 1000);
+
+function removalOfProductFromCart(event) {
+  let btn = event.target;
+  let div = btn.parentNode;
+  cartItemsContainer = document.getElementById("cart-products");
+  let removedItemImgLink =
+    div.firstChild.nextElementSibling.getAttribute("src");
+  cartItemsContainer.removeChild(div); // removed from ui
+  // now remove from local storage
+  // let removedItemImgLink =
+  //   div.firstChild.nextElementSibling.getAttribute("src");
+  let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+  for (let i = 0; i < cartItems.length; i++) {
+    if (cartItems[i] === removedItemImgLink) {
+      cartItems.splice(i, 1);
+      break;
+    }
+  }
+  //console.log(cartItems);
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  appendProductsInCartUI();
+}
+function removeProductFromCart() {
+  let removeitemBtns = document.querySelectorAll("#addBtn");
+  console.log(removeitemBtns);
+  if (removeitemBtns != null) {
+    removeitemBtns.forEach((deleteBtn) => {
+      deleteBtn.addEventListener("click", removalOfProductFromCart);
+    });
+  }
+}
+//removeProductFromCart();
 //appendProductsInCartUI();
-
-
