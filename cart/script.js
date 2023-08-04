@@ -97,3 +97,5 @@ function appendProductsInCartUI() {
 }
 setTimeout(appendProductsInCartUI, 1000);
 //appendProductsInCartUI();
+
+
